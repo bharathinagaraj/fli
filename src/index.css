@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(45px, -60px) scale(1.15);
+  }
+  66% {
+    transform: translate(-35px, 35px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 12s ease-in-out infinite;
+}
+
+.animate-blob-delay {
+  animation: blob 14s ease-in-out 2s infinite;
+}
+
+.animate-blob-slow {
+  animation: blob 18s ease-in-out 4s infinite;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.25s ease-out both;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.3s ease-out both;
+}
+
+.social-btn {
+  background-color: #1f2937;
+  color: #d1d5db;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn:hover {
+  background-color: var(--sc);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--sc);
+}
+
+
